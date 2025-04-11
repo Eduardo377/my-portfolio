@@ -16,14 +16,14 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   if (!mounted) {
-    return <Component {...pageProps} />;
+    return null; // Ou um loader enquanto o tema é carregado
   }
 
   return (
     <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   );
 }
