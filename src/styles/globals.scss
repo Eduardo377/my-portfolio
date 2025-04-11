@@ -1,9 +1,6 @@
-@import "tailwindcss";
-
-@import "tailwindcss/preflight";
-@use "tailwindcss/base";
-@use "tailwindcss/components";
-@use "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --background: #fff;
@@ -20,4 +17,8 @@
 html {
   scroll-behavior: smooth;
   transition: background 0.3s ease, color 0.3s ease;
+}
+
+body {
+  @apply bg-white dark:bg-gray-900 transition-colors duration-300;
 }
