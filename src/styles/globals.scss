@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@import "tailwindcss/preflight";
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+
+:root {
+  --background: #fff;
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+}
+
+[data-theme='dark'] {
+  --background: #0e0e0e;
+  --primary: #818cf8;
+  --primary-dark: #6366f1;
+}
+
+html {
+  scroll-behavior: smooth;
+  transition: background 0.3s ease, color 0.3s ease;
+}
