@@ -8,40 +8,20 @@ export const Navbar = () => {
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
 
-    // Efeito para garantir que o componente está montado no cliente
     useEffect(() => {
         setMounted(true)
     }, [])
 
-    // Evitar renderização do ícone até que o componente esteja montado
-    if (!mounted) {
-        return (
-            <header className="w-full bg-white dark:bg-gray-900 shadow">
-                <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-                    <Link href="/">
-                        <span className="font-bold text-xl">Eduardo Andrade</span>
-                    </Link>
-                    <nav className="flex gap-6 items-center">
-                        <Link href="/about">Sobre</Link>
-                        <Link href="/projects">Projetos</Link>
-                        <Link href="/contact">Contato</Link>
-                        <button className="ml-4 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700 w-9 h-9"></button>
-                    </nav>
-                </div>
-            </header>
-        )
-    }
-
     return (
-        <header className="w-full bg-white dark:bg-gray-900 shadow">
-            <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <header className="w-full max-w-6xl mx-auto px-6 md:px-12 py-4 bg-white shadow flex justify-between items-center">
+            <div className="w-full max-w-6xl mx-auto px-6 md:px-12 py-4 flex justify-between items-center">
                 <Link href="/">
                     <span className="font-bold text-xl">Eduardo Andrade</span>
                 </Link>
-                <nav className="flex gap-6 items-center">
-                    <Link href="/about">Sobre</Link>
-                    <Link href="/projects">Projetos</Link>
-                    <Link href="/contact">Contato</Link>
+                <nav className=" flex justify-between items-center text-sm font-medium">
+                    <Link href="/about" className="hover:text-primary transition-colors">Sobre</Link>
+                    <Link href="/projects" className="hover:text-primary transition-colors">Projetos</Link>
+                    <Link href="/contact" className="hover:text-primary transition-colors">Contato</Link>
                     <button
                         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
                         className="ml-4 p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-700"

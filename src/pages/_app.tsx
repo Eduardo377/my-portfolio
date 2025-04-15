@@ -3,10 +3,6 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { useEffect, useState } from "react";
 import { Layout } from "@/components/Layout/Layout"
-import { SkillsSection } from '@/components/SkillsSection/SkillsSection'
-// import { ExperiencePreview } from '@/components/Experience/ExperiencePreview'
-import Projects from '@/components/Projects/Projects'
-import Contact from '@/components/Contact/Contact'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [mounted, setMounted] = useState(false);
@@ -16,11 +12,11 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   if (!mounted) {
-    return null; // Ou um loader enquanto o tema é carregado
+    return null;
   }
 
   return (
-    <ThemeProvider attribute="data-theme" defaultTheme="system" enableSystem>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <Layout>
         <Component {...pageProps} />
       </Layout>

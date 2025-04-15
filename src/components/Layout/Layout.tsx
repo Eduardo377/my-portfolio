@@ -16,7 +16,7 @@ export const Layout = ({
     description = 'Portfólio profissional de Eduardo Andrade, desenvolvedor Front-End especializado em React, Next.js e TypeScript'
 }: LayoutProps) => {
     return (
-        <div className="flex flex-col min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+        <div className="flex flex-col min-h-screen">
             <Head>
                 <title>{title}</title>
                 <meta name="description" content={description} />
