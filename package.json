@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "framer-motion": "^12.6.3",
-    "lucide-react": "^0.487.0",
+    "framer-motion": "^12.7.3",
+    "lucide-react": "^0.488.0",
     "my-portfolio": "file:",
     "next": "15.3.0",
     "next-themes": "^0.4.6",
@@ -18,12 +18,12 @@
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "sass": "^1.86.3",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
-    "@types/node": "^22.14.0",
-    "@types/react": "^19.1.0",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.24.0",
